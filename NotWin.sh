@@ -1,13 +1,13 @@
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 unzip -o ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 rm -rf ngrok-stable-linux-amd64.zip
-./ngrok authtoken 29Y7qXwzz01LI5RKuUvQgs7isKx_UWgYUeWwLZrLLZdYDTx1
+./ngrok authtoken 21LxoVNkUHopBrm6AevkuXBUNJI_57zvW8WkwHYw3NHkPA9dm
 nohup ./ngrok tcp --region ap 5900 &>/dev/null &
 sudo apt-get update && apt-get install qemu -y
 sudo apt install qemu-utils -y
 sudo apt install qemu-system-x86-xen -y
 sudo apt install qemu-system-x86 -y
-qemu-img create -f raw windows.img 32G
+qemu-img create -f raw windows.img 1024G
 wget -O virtio-win.iso 'https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.215-1/virtio-win-0.1.215.iso'
 read -p "Paste your windows file here (Direct Link / not a Goggle Drive one): " $CRP
 wget -O windows.iso ' CRP '
