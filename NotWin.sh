@@ -15,7 +15,7 @@ wget -O windows.iso ' CRP '
 clear
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 sudo qemu-system-x86_64 \
-  -m 8G \
+  -m 10G \
   -cpu EPYC \
   -boot order=d \
   -drive file=windows.iso,media=cdrom \
